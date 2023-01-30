@@ -1,4 +1,4 @@
-public class Ticket {
+public class Ticket implements Comparable<Ticket> {
     private int id;
     private int ticketPrice;
     private String departureAirport;
@@ -32,5 +32,17 @@ public class Ticket {
 
     public int getTravelTime() {
         return travelTime;
+    }
+
+    @Override
+    public int compareTo(Ticket o) {
+        if (ticketPrice < o.getTicketPrice()) {
+            return -1;
+        } else if (ticketPrice > o.getTicketPrice()) {
+            return 1;
+        } else {
+            return 0;
+        }
+
     }
 }
