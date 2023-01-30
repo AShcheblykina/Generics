@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class Manager {
-    private static Repository repository;
+    private Repository repository;
 
     public Manager(Repository repository) {
         this.repository = repository;
@@ -31,8 +31,6 @@ public class Manager {
         if (ticket.getDepartureAirport().equals(departureAirport)) {
             if (ticket.getArrivalAirport().equals(arrivalAirport)) {
                 return true;
-            } else {
-
             }
         }
         return false;

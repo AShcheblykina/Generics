@@ -83,6 +83,8 @@ public class RepositoryTest {
 
         Ticket[] expected = {ticket2, ticket3, ticket4, ticket5, ticket6};
         Ticket[] actual = repo.deletyById(1);
+
+        Assertions.assertArrayEquals(expected, actual);
     }
 
 }
